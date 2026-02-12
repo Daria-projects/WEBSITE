@@ -1,0 +1,185 @@
+/* 
+   MY COLOR SYSTEM
+ */
+:root {
+  --color-dark: #0f172a;
+  --color-text: #1f2933;
+  --color-muted: #64748b;
+  --color-accent: #38bdf8;
+  --color-border: #e2e8f0;
+
+  --color-header-bg: #0f172a;
+  --color-header-border: #1e293b;
+  --color-header-link: #7dd3fc;
+  --color-header-hover: #1e293b;
+  --color-accent-hover: #0ea5e9;
+  --color-footer-bg: #1f2a44;
+  --color-footer-text: #f5f7fa;
+  --color-background: #f8fafc;
+}
+
+/* 
+   BASE
+ */
+
+body {
+  margin: 0;
+  font-family: "Roboto", system-ui, sans-serif;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+/* 
+   FONTS
+ */
+
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/Roboto-VariableFont_wdth,wght.ttf") format("truetype");
+}
+
+/* 
+   TYPOGRAPHY
+ */
+
+html {
+  font-size: 18px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Inter", sans-serif;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--color-dark);
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-muted);
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1.1rem;
+}
+
+strong {
+  font-weight: 600;
+}
+
+/* 
+   LINKS
+ */
+
+a {
+  color: var(--color-accent);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 
+   HEADER 
+ */
+
+header {
+  padding: 0.5rem 0;
+  background-color: var(--color-header-bg);
+  border-bottom: 1px solid var(--color-header-border);
+}
+
+header nav a {
+  font-family: "Inter", sans-serif;
+  color: var(--color-header-link);
+  padding: 0.35rem 0.75rem;
+  line-height: 1.2;
+  border-radius: 0.5rem;
+  display: inline-block;
+}
+
+header nav a:hover {
+  background-color: var(--color-header-hover);
+}
+
+/* 
+   IMAGES & FIGURES
+ */
+
+figure {
+  margin: 0;
+}
+
+figure + figure {
+  margin-top: 2rem;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+figcaption {
+  margin-top: 0.4rem;
+  padding-left: 0.75rem;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  font-style: italic;
+  border-left: 2px solid var(--color-border);
+  color: var(--color-muted);
+}
+
+/* 
+   CTA BUTTON
+ */
+.cta-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+.cta-button {
+  background-color: var(--color-accent);
+}
+
+.cta-button:hover {
+  background-color: var(--color-accent-hover);
+}
+
+/* 
+   FOOTER 
+ */
+
+footer {
+  background-color: var(--color-footer-bg);
+  color: var(--color-footer-text);
+  border-top: 1px solid var(--color-border);
+}

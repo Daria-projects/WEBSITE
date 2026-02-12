@@ -1,0 +1,190 @@
+/* 
+   STRUCTURE
+ */
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem 6rem;
+}
+
+/* 
+   HEADER
+ */
+
+header ul {
+  list-style: none;
+  padding: 1rem 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column; /* mobile */
+  gap: 0.75rem;
+}
+
+/* 
+   SECTION SPACING
+ */
+
+.section-spacing {
+  margin-bottom: 4rem;
+}
+
+/* 
+   GRID SYSTEM MOBILE 
+*/
+
+.grid_1-1,
+.grid_2-1,
+.grid_1-4,
+.grid_2-3,
+.grid_3-2,
+.grid_5-3,
+.grid_1-1-1,
+.grid_1-1-1-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+/* 
+   STATS GRID
+ */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* mobile = 1 column */
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.stats-grid div {
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.stats-grid dt {
+  font-size: 2.2rem;
+  letter-spacing: -0.5px;
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
+.stats-grid dd {
+  margin-top: 0.7rem;
+  font-size: 0.95rem;
+  color: var(--color-muted);
+}
+
+/* 
+   FLEX UTILITIES
+ */
+
+.flex_col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex_col > :last-child {
+  margin-top: auto;
+}
+
+/* 
+   INTRO TEXT
+ */
+
+.intro-text p {
+  max-width: 65ch;
+}
+
+/* 
+   FOOTER
+*/
+
+footer {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* 
+   DESKTOP LAYOUTS (≥ 900px)
+ */
+
+@media (min-width: 900px) {
+  .grid_1-1 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid_2-1 {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .grid_1-4 {
+    grid-template-columns: 1fr 4fr;
+  }
+
+  .grid_2-3 {
+    grid-template-columns: 2fr 3fr;
+  }
+
+  .grid_3-2 {
+    grid-template-columns: 3fr 2fr;
+  }
+
+  .grid_5-3 {
+    grid-template-columns: 5fr 3fr;
+  }
+
+  .grid_1-1-1 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid_1-1-1-1 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .grid_1-1-1-1 img {
+    border-radius: 0.5rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  header ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2.5rem;
+  }
+
+  /* 
+   GALLERY SPANS
+ */
+  .span_2x2 {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .span_2x1 {
+    grid-column: span 2;
+  }
+
+  .span_3x1 {
+    grid-column: span 3;
+  }
+}
